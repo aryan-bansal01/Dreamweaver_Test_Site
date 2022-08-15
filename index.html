@@ -9,8 +9,25 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+    <link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+    <link href="jQueryAssets/jquery.ui.dialog.min.css" rel="stylesheet" type="text/css">
+    <link href="jQueryAssets/jquery.ui.resizable.min.css" rel="stylesheet" type="text/css">
+    <link href="jQueryAssets/jquery.ui.button.min.css" rel="stylesheet" type="text/css">
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+  <script src="jQueryAssets/jquery.ui-1.10.4.dialog.min.js"></script>
+  <script src="jQueryAssets/jquery.ui-1.10.4.button.min.js"></script>
   </head>
   <body>
+  <div id="RadioButtons1">
+    <input type="radio" name="RadioButtons1" id="Radio1">
+    <label for="Radio1">Label 1</label>
+    <input type="radio" name="RadioButtons1" id="Radio2">
+    <label for="Radio2">Label 2</label>
+    <input type="radio" name="RadioButtons1" id="Radio3">
+    <label for="Radio3">Label 3</label>
+  </div>
+  <div id="Dialog1">Content for New Dialog Goes Here</div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
        <a class="navbar-brand" href="#">Navbar</a>
        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,8 +69,9 @@
        Content for New div Tag Goes Here</div>
        <p class="lead">Easily build your page using the Bootstrap components from the Insert panel.</p>
        <hr class="my-4">
-       <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
        <p class="lead">
+         <button id="Button1">Button</button>
           <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
        </p>
     </div>
@@ -164,5 +182,17 @@
     <!-- Include all compiled plugins (below), or include individual files as needed --> 
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap-4.4.1.js"></script>
+	<script src="app.js"></script>
+  <script type="text/javascript">
+$(function() {
+	$( "#Dialog1" ).dialog(); 
+});
+$(function() {
+	$( "#Button1" ).button(); 
+});
+$(function() {
+	$( "#RadioButtons1" ).buttonset(); 
+});
+  </script>
   </body>
 </html>
